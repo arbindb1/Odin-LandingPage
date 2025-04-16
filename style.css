@@ -1,0 +1,92 @@
+@font-face{
+    font-family: 'roboto';
+    src: url('fonts/Roboto-VariableFont_wdth\,wght.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+*{
+    font-family:'roboto';
+    padding:0;
+    margin:0;
+}
+.main-container{
+    display:flex;
+    flex-direction:column;
+    border:solid 2px green;
+    height:100vh;
+}
+.hero-container{
+    display:flex;
+    flex-direction:column;
+    padding:20px;
+    background-color: #1F2937;
+    font-size:15px;
+    gap:100px;
+}
+.nav-section{
+    display:flex;
+    justify-content: space-around;
+    background-color: #1F2937;
+
+}
+
+.nav-section h1{
+    font-size:20px;
+}
+.nav-section ul, .hero-section .left-hero p{
+    font-size:18px;
+    color:#E5E7EB;
+    font-weight:900;
+}
+.nav-section > ul{
+display:flex;
+gap:50px;
+align-items: center;
+}
+
+.nav-section > .nav-list-section li{
+    list-style: none;
+} 
+.hero-section > .left-hero{
+    display:flex;
+    flex-direction:column;
+    gap:10px;
+    justify-content: center;
+
+}
+.hero-section > .right-hero{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+.hero-section{
+    display:flex;
+    justify-content: center;
+    gap:20px;
+}
+
+.hero-section .left-hero, .hero-section .right-hero, .hero-section .right-hero img{
+    width:500px;
+    height:auto;
+}
+.hero-section .left-hero h1{
+    font-size:48px;
+}
+.hero-section > .left-hero h1, .nav-section h1{
+    color:#F9FAF8;
+}
+.hero-section > .left-hero button{
+    width:120px;
+    height:40px;
+    padding:10px;
+    border-radius:10px;
+    background-color:#3882F6;
+    color:#fff;
+    font-size:16px;
+}
+
+.hero-section > .left-hero p{
+    font-weight:500;
+}
+
+
