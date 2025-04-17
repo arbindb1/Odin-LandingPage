@@ -12,7 +12,6 @@
 .main-container{
     display:flex;
     flex-direction:column;
-    border:solid 2px green;
     min-height:100vh;
     gap:30px;
 }
@@ -102,18 +101,37 @@ margin-bottom:50px;
 }
 .content-container .content-box{
 display:flex;
+flex-direction:row;
 justify-content: center;
 gap:50px;
-width:300px;
+min-width:300px;
 }
-.content-container .content-box div img{
+.content-container > *{
+    flex-wrap:wrap;
+    flex:1;
+}
+/* .content-container .content-box div img{
     width:200px;
-}
+} */
 
 .content-container > .content-box > div{
     display:flex;
     flex-direction:column;
     flex-wrap:wrap;
+    align-items: center;
+    width:150px;
+    padding:20px;
+    border-radius:10px;
+    background-color: #fff;
+}
+.content-box > div img{
+    width:100%;
+    height:auto;
+    border-radius:6px;
+    display:block;
+}
+.content-container > .content-box > div > *{
+    flex:1;
 }
 .content-container > .content-box > div img{
     margin-bottom:10px;
@@ -136,12 +154,17 @@ flex-wrap:wrap;
 }
 .feedback-container div{
     display:flex;
-    width:800px;
+    max-width:800px;
     font-size:35px;
     font-style: italic;
     color: #1F2937;
 }
+.feedback-container div *{
+flex-wrap:wrap;
+}
 .feedback-container div:last-child{
+    display:flex;
+    width:100%;
     justify-content: flex-end;
     font-size:25px;
     font-weight:900;
@@ -160,6 +183,16 @@ flex-wrap:wrap;
     border-radius:10px;
     justify-content: space-around;
 }
+.prompt-container > div *{
+    display:flex;
+    flex-wrap:wrap;
+}
+.prompt-container > div > div{
+    flex-direction:column;
+}
+.prompt-container > div:first-child h2,.prompt-container > div:first-child p{
+    display:inline;
+}
 .prompt-container > div div{
 color:#E5E7EB;
 }
@@ -174,5 +207,6 @@ color:#E5E7EB;
 background-color: #1F2937;
 }
 .prompt-container > div button{
+justify-content: center;
     border:solid 2px #fff;
 }
